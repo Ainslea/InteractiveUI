@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var name = ""
     @State private var age = ""
     @State private var textTitle = "What is your name and age?"
@@ -19,13 +20,13 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .border(Color.gray, width: 1)
-            TextField("Type your age here...", text: $name)
+            TextField("Type your age here...", text: $age)
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .border(Color.gray, width: 1)
             
             Button("Submit Name and Age") {
-                textTitle = "Welcome, \(name) \(age)!"
+                textTitle = "Welcome, \(name) (\(age))!"
                 name=""
             }
             .font(.title2)
